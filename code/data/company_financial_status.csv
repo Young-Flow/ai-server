@@ -1,0 +1,200 @@
+﻿movieId,name,overview,popularity,production_countries,release_date,Original Ask Amount,revenue,reward,risk
+49,운랩,"Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",21.946943,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.30,30000000,373554033,ST,40
+30,AvaTheElephant,Ava The Elephant - Baby and Child Care,17.015539,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.15,5000000,262797249,ST,10
+21,MrTod'sPieFactory,Mr. Tod's Pie Factory - Specialty Food,11.7129,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.22,46000000,0,R,96
+39,Wispots,Wispots - Consumer Services,3.859495,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.22,120000000,81452156,ST,61
+9,CollegeFoxesPackingBoxes,College Foxes Packing Boxes - Consumer Services,8.387519,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.2.10,25000000,76578911,ST,42
+33,IonicEar,Ionic Ear - Novelties,17.924927,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.15,100000000,187436818,R,77
+1,APerfectPear,A Perfect Pear - Specialty Food,6.677277,"[{'iso_3166_1': 'DE', 'name': 'Germany'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.15,50000000,0,ST,94
+44,ClassroomJams,Classroom Jams - Education,2.561161,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.22,25000000,0,ST,95
+37,Lifebelt,Lifebelt - Automotive,5.23158,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.22,50000000,64350171,ST,5
+21,CrookedJaw,Crooked Jaw - Men and Women's Apparel,14.686036,"[{'iso_3166_1': 'GB', 'name': 'United Kingdom'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.16,20000000,352194034,ST,70
+54,StickyNoteHolder,Sticky Note Holder - Productivity Tools,6.318445,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.17,10000000,107879496,ST,55
+40,TurboBaster,TurboBaster - Kitchen Tools,5.430331,"[{'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.22,3500000,0,R,96
+2,StressFreeKids,Stress Free Kids - Baby and Child Care,12.140733,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.22,25000000,11348324,ST,22
+23,KwyztaChopstickArt,Kwyzta Chopstick Art - Kitchen Tools,5.092,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.22,10000000,13681765,ST,45
+26,50StateCapitalsin50Minutes,50 State Capitals in 50 Minutes - Education,7.284477,"[{'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'DE', 'name': 'Germany'}, {'iso_3166_1': 'IT', 'name': 'Italy'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.22,15500000,10017322,R,29
+5,VoyageAirGuitar,Voyage Air Guitar - Music,10.137389,"[{'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.22,50000000,116112375,ST,45
+33,GiftCardRescue,Gift Card Rescue - Online Services,10.673167,"[{'iso_3166_1': 'GB', 'name': 'United Kingdom'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.13,15000000,135000000,ST,23
+42,Coverplay,Coverplay - Baby and Child Care,9.026586,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.9,35000000,4300000,ST,4
+15,GraffitiRemovalServices,Graffiti Removal Services - Professional Services,8.205448,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.10,35000000,212385533,ST,37
+25,SoulsCalling,"Soul's Calling, Inc. - Women's Accessories",7.337906,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.21,15000000,35431113,ST,56
+21,CoffeeBrandGifts,Coffee Brand Gifts - Novelties,12.669608,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.20,30000000,115101622,ST,27
+22,MyTherapyJournal,My Therapy Journal - Online Services,10.701801,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.27,8000000,0,R,97
+26,BodyJac,Body Jac - Fitness Equipment,11.065939,"[{'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.6,18000000,30303072,ST,24
+48,GoodGriefCelebrations,Good Grief Celebrations - Consumer Services,12.133094,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.27,5000000,0,ST,96
+13,GranolaGourmet,Granola Gourmet - Specialty Food,10.332025,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.27,17500000,49800000,R,82
+19,FaceBlok,Face Blok - Novelties,1.845899,"[{'iso_3166_1': 'IT', 'name': 'Italy'}]",1995.12.15,5000000,0,ST,90
+29,PorkBarrelBBQSauce,Pork Barrel BBQ Sauce - Specialty Food,8.681325,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.20,5000000,27400000,ST,58
+54,ElementBars,Element Bars - Specialty Food,2.228434,"[{'iso_3166_1': 'GB', 'name': 'United Kingdom'}, {'iso_3166_1': 'FR', 'name': 'France'}]",1995.9.27,15000000,0,ST,94
+14,UndereaseUnderwear,Underease Underwear - Undergarments and Basics,9.822423,"[{'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'DE', 'name': 'Germany'}, {'iso_3166_1': 'ES', 'name': 'Spain'}]",1995.5.16,5500000,1738611,ST,51
+49,KalyxTechnologies,Kalyx Technologies - Undergarments and Basics,1.100915,"[{'iso_3166_1': 'CN', 'name': 'China'}, {'iso_3166_1': 'FR', 'name': 'France'}]",1995.4.30,12500000,0,ST,93
+42,TheFizz,The Fizz - Non-Alcoholic Beverages,9.481338,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.8.11,15000000,180000000,R,48
+31,Soy-Yer-Dough,Soy-Yer-Dough - Toys and Games,12.297305,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.29,12500000,168840000,ST,62
+25,GrillCharmsSet,Grill Charms Set - Kitchen Tools,0.745542,"[{'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.9.18,5000000,0,ST,91
+46,BoogieBoxFitness,Boogie Box Fitness - Fitness Programs,14.404764,"[{'iso_3166_1': 'AU', 'name': 'Australia'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.7.18,70000000,254134910,R,58
+8,TheFunhouseProject,The Fun house Project - Entertainment,1.493361,"[{'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'GB', 'name': 'United Kingdom'}]",1995.11.8,30000000,0,ST,95
+36,TreasureChestPets,Treasure Chest Pets - Toys and Games,6.891317,"[{'iso_3166_1': 'US', 'name': 'United States of America'}, {'iso_3166_1': 'GB', 'name': 'United Kingdom'}]",1995.12.29,15000000,39363635,ST,5
+27,Notehall,Notehall - Online Services,0.114469,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.20,9000000,0,ST,95
+45,Throx,Throx - Undergarments and Basics,7.777735,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.17,5000000,0,ST,96
+12,WashedUpHollywood,Washed Up Hollywood - Fashion Accessories,9.882383,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.7.19,50000000,0,ST,97
+10,GaylaBentleyFashion,Gayla Bentley Fashion - Women's Apparel,0.894647,"[{'iso_3166_1': 'ZA', 'name': 'South Africa'}]",1995.12.15,25000000,676525,ST,51
+18,ChillSoda,Chill Soda - Non-Alcoholic Beverages,4.561387,"[{'iso_3166_1': 'GB', 'name': 'United Kingdom'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.29,5000000,0,R,97
+10,CornucopiaExpress,Cornucopia Express - Pet Products,9.87957,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.6,30000000,0,ST,99
+25,VirtuSphere,Virtusphere - Electronics,10.979269,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.29,150000000,0,ST,98
+23,TheUROClub,The UROClub - Golf Products,10.870138,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.8.18,2500000,122195920,R,25
+8,JumpForward,Jump Forward - Online Services,10.448481,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.5.20,15000000,21284514,ST,28
+20,TheBobblePlace,The Bobble Place - Toys and Games,4.485958,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.6,7500000,23574130,ST,28
+3,MrPoncho,Mr. Poncho - Electronics,18.45743,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.9.22,5000000,327311859,ST,2
+43,HellsBellsHelmets,Hells Bells Helmets - Outdoor Recreation,13.280069,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.6.14,50000000,346079773,ST,41
+13,ChefInBlack,Chef In Black - Specialty Food,3.302524,"[{'iso_3166_1': 'CA', 'name': 'Canada'}]",1995.5.5,5000000,0,ST,94
+35,InkFlip,Ink Flip - Electronics,16.302466,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.7.19,15000000,23341568,R,39
+31,RompN'Roll,Romp n' Roll - Baby and Children's Entertainment,0.595949,[],1994.11.22,30000000,0,ST,92
+12,TheTwister,The Twister - Golf Products,15.899134,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.9.13,8500000,6700000,ST,11
+19,GreaseMonkeyWipes,Grease Monkey Wipes - Outdoor Recreation,1.361286,"[{'iso_3166_1': 'IT', 'name': 'Italy'}, {'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'CH', 'name': 'Switzerland'}]",1994.1.1,4000000,0,R,95
+29,WeeCanShop,Wee Can Shop - Baby and Children's Entertainment,5.982764,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.9.29,20000000,0,ST,92
+19,Podillow,The Podillow - Novelties,4.093443,"[{'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.5.19,25000000,0,ST,95
+17,TheFactionist,The Factionist - Men and Women's Apparel,0.307075,[],1997.7.8,3000000,0,ST,92
+24,Caffeindicator,Caffeindicator - Novelties,8.416802,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.2,20000000,17519169,ST,31
+38,LipstickRemix,Lipstick Remix - Personal Care and Cosmetics,10.168437,"[{'iso_3166_1': 'BE', 'name': 'Belgium'}, {'iso_3166_1': 'FR', 'name': 'France'}, {'iso_3166_1': 'IT', 'name': 'Italy'}]",1994.9.22,10500000,0,ST,99
+31,LegalGrind,Legal Grind - Professional Services,0.120789,"[{'iso_3166_1': 'CA', 'name': 'Canada'}]",1995.9.29,20000000,0,ST,92
+13,CaptainIceCream,Captain Ice Cream - Specialty Food,10.673296,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.7.14,4800000,0,R,95
+20,Nubrella,Nubrella - Novelties,4.733526,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.12,20000000,0,ST,100
+16,Qubits,Qubits - Toys and Games,7.137117,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.29,9000000,106269971,ST,62
+37,SendABall,Send A Ball - Novelties,11.700115,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.12,8600000,0,R,94
+2,PillarsOfSlippers,Pillars of Slippers - Women's Shoes,2.174487,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.12,15000000,0,ST,95
+54,LlamaBrew,Llama Brew - Gardening,6.387469,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.12,12500000,0,ST,98
+51,WurkinStiffs,Wurkin Stiffs - Men's Accessories,2.49535,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.12,8500000,2409225,ST,5
+2,TippiToes,Tippi Toes - Baby and Children's Entertainment,4.046208,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.22,3000000,0,ST,90
+27,CBSFoods,CBS Foods - Specialty Food,2.518051,"[{'iso_3166_1': 'FR', 'name': 'France'}]",1995.2.8,20000000,0,ST,93
+42,CopadiVino,Copa di Vino - Alcoholic Beverages,14.56965,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.4.26,30000000,28215918,R,76
+31,Toygaroo,Toygaroo - Toys and Games,15.339153,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.19,10000000,25836616,ST,48
+33,FirstDefenseNasalScreen,First Defense Nasal Screen - Health and Well-Being,5.912223,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.3,50000000,11534477,ST,52
+50,Vurtego,Vurtego - Toys and Games,3.367276,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.6,50000000,718490,R,45
+13,Waken'Bacon,Wake n' Bacon - Novelties,1.479446,"[{'iso_3166_1': 'FR', 'name': 'France'}]",1995.3.22,4000000,0,ST,99
+17,ModMomFurniture,Mod Mom Furniture - Furniture,10.412194,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.26,9000000,19030691,ST,52
+32,Flipoutz,Flipoutz - Toys and Games coins,2.936443,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.26,10000000,2042530,ST,62
+23,FitnessStride,Fitness Stride - Fitness Apparel and Accessories,12.758848,"[{'iso_3166_1': 'CA', 'name': 'Canada'}, {'iso_3166_1': 'JP', 'name': 'Japan'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.9.8,14000000,5781885,R,36
+24,PureAyre,Pure Ayre - Storage and Cleaning Products,0.133893,"[{'iso_3166_1': 'DE', 'name': 'Germany'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.2.18,15000000,0,ST,90
+24,BroccoliWad,Broccoli Wad - Novelties,5.756462,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.15,5000000,0,ST,92
+20,HillbillyBrand,Hillbilly Brand - Men and Women's Apparel,6.010579,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.2.2,5000000,0,R,97
+32,Ride-OnCarry-On,Ride-On Carry-On - Baby and Child Care,1.196256,"[{'iso_3166_1': 'IR', 'name': 'Iran'}]",1995.1.1,5000000,0,ST,97
+4,UncleZip'sBeefJerky,Uncle Zip's Beef Jerky - Specialty Food,4.486179,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.12.1,2500000,529766,ST,41
+34,Lightfilm,Lightfilm - Automotive  for car windows,2.030174,"[{'iso_3166_1': 'NL', 'name': 'Netherlands'}, {'iso_3166_1': 'GB', 'name': 'United Kingdom'}, {'iso_3166_1': 'BE', 'name': 'Belgium'}]",1995.9.12,10000000,0,ST,95
+6,FridgeFronts,Fridge Fronts - Home Improvement,0.252287,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.26,10000000,0,ST,96
+11,NewEraBrands,New Era Brands - Novelties contact lens cases,0.531159,[],1995.11.22,50000000,0,ST,100
+21,ThinGloss,Thin Gloss - Personal Care and Cosmetics,2.15166,"[{'iso_3166_1': 'GB', 'name': 'United Kingdom'}, {'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.9.10,8000000,0,R,98
+7,SweepEasy,Sweep Easy - Storage and Cleaning Products,9.568604,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.2.2,4000000,10300000,ST,30
+3,DaisyCakes,Daisy Cakes - Specialty Food,4.814825,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.1.12,5000000,0,ST,91
+15,HotMamaGowns,Hot Mama Gowns - Maternity gowns,8.963037,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.2.1,3000000,32,R,13
+18,CaddySwag,Caddy Swag - Golf Products,6.848591,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.11.22,6000000,8175346,ST,79
+8,Hydromax,Hydromax - Fitness Apparel and Accessories,0.411424,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.9.14,5000000,0,ST,91
+18,CarsikBib,Carsik Bib - Baby and Child Care,12.866139,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.2.23,3000000,12379402,ST,68
+5,Ecomowers,Ecomowers - Gardening mower,9.071127,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1995.10.26,9000000,19800000,R,18
+21,Games2U,Games2U - Entertainment,4.670562,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.2.9,50000000,0,ST,97
+45,HyConn,HyConn - Productivity Tools fire hydrant,14.957626,"[{'iso_3166_1': 'US', 'name': 'United States of America'}]",1996.2.9,50000000,150270147,ST,84
+11,Origaudio,Origaudio - Electronics portable speakers,0.513391,"[{'iso_3166_1': 'GB', 'name': 'United Kingdom'}]",1995.12.1,15000000,0,R,92
+22,ManCandle,Man Candle - Home Accessories,12.108196,"[{'iso_3166_1': 'FR', 'name': 'France'}]",1995.5.31,5000000,0,ST,99
+41,OriginalRunnerCompany,Original Runner Company - Weddings,2.657647,"[{'iso_3166_1': 'GB', 'name': 'United Kingdom'}]",1994.12.6,25000000,0,ST,93
+16,AldoOrtaJewelry,Aldo Orta Jewelry - Women's Accessories,0.638211,"[{'iso_3166_1': 'GB', 'name': 'United Kingdom'}, {'iso_3166_1': 'CA', 'name': 'Canada'}, {'iso_3166_1': 'US', 'name': 'United States of America'}, {'iso_3166_1': 'DE', 'name': 'Germany'}]",1995.12.27,18000000,0,ST,96
+53,OneSole,One Sole - Women's Shoes,,,,50000000,,ST,96
+54,CitiKitty,CitiKitty - cat Products,,,,10000000,,ST,93
+53,SamsonMartin,Samson Martin - Women's Apparel,,,,5000000,,R,94
+29,EZVIP,EZ VIP - Entertainment,,,,15000000,,ST,97
+46,TheCleanBottle,The Clean Bottle - Water Bottles,,,,6000000,,ST,94
+9,MyWonderfulLife,My Wonderful Life - Consumer Services,,,,10000000,,R,94
+9,BusinessGhost,Business Ghost - Professional Services,,,,20000000,,ST,93
+1,IWantToDrawACatForYou,I Want To Draw A Cat For You - Online Services,,,,1000000,,ST,100
+7,Salespreneur,Salespreneur - Professional Services,,,,9000000,,ST,95
+44,Invis-A-Rack,Invis-A-Rack - Automotive,,,,10000000,,R,96
+29,VegasMagicShow,Vegas Magic Show - Entertainment,,,,150000000,,ST,100
+51,YouSmellSoap,You Smell Soap - Personal Care and Cosmetics,,,,5500000,,ST,95
+35,ChordBuddy,Chord Buddy - Music,,,,12500000,,R,92
+51,LiquidMoney,Liquid Money - Novelties,,,,10000000,,ST,90
+6,TailLightz,Tail Lightz - Electronics,,,,5000000,,ST,90
+46,WineBalloon,Wine Balloon - Wine Accessories,,,,4000000,,ST,90
+53,ShowNo,Show No - Baby and Children's Apparel and Accessories,,,,5000000,,ST,96
+53,TheSwilt,The Swilt - Undergarments and Basics,,,,3000000,,ST,94
+54,PuppyCake,Puppy Cake - Pet Products,,,,5000000,,R,92
+52,TheLastLid,The Last Lid - Storage and Cleaning Products,,,,4000000,,ST,97
+11,TalbottTeas,Talbott Teas - Specialty Food,,,,25000000,,ST,94
+53,M3GirlDesigns,M3 Girl Designs - Baby and Children's Apparel and Accessories,,,,30000000,,ST,95
+52,LedgePillow,Ledge Pillow - Novelties,,,,3000000,,R,97
+44,ReaderestSpecsecure,Readerest Specsecure - Novelties,,,,15000000,,ST,96
+11,ThePaintedPretzel,The Painted Pretzel - Specialty Food,,,,10000000,,ST,90
+10,EssoWatches,Esso Watches - Homeopathic Remedies,,,,3500000,,R,96
+52,FiveMinuteFurniture,Five Minute Furniture - Furniture,,,,25000000,,ST,99
+51,Kisstixx,Kisstixx - Personal Care and Cosmetics,,,,20000000,,ST,97
+52,TheSmartBaker,The Smart Baker - Kitchen Tools,,,,7500000,,ST,96
+53,ScotteVest,ScotteVest - Men and Women's Apparel,,,,50000000,,ST,90
+46,TheHeatHelper,The Heat Helper - Home Accessories,,,,10000000,,ST,97
+53,Litter,Litter - Women's Accessories,,,,8000000,,R,97
+51,Nardo'sNatural,Nardo's Natural - Personal Care and Cosmetics,,,,7500000,,ST,90
+21,TheOriginalProfender,The Original Profender - Fitness Equipment,,,,7500000,,ST,97
+10,Rent-A-Grandma,Rent-A-Grandma - Consumer Services,,,,15000000,,R,96
+20,TowerPaddleBoards,Tower Paddle Boards - Outdoor Recreation,,,,15000000,,ST,92
+35,MisoMedia,Miso Media - Music,,,,30000000,,ST,99
+51,InstantLifts,Instant Lifts - Personal Care and Cosmetics,,,,10000000,,R,91
+46,Vinamor,Vinamor - Wine Accessories,,,,7500000,,ST,94
+53,GoGoGear,GoGo Gear - Men and Women's Apparel,,,,30000000,,ST,95
+53,TheAveVenice,The Ave Venice - Men and Women's Shoes,,,,12500000,,R,93
+11,Brewer'sCow,Brewer싀꽸큦 Cow - Specialty Food,,,,12500000,,ST,98
+54,Bark'em'sToGo,Bark싀꽸큖m싀꽸큦 To Go - Pet Products,,,,10000000,,ST,99
+21,ViewSport,ViewSport - Fitness Apparel and Accessories,,,,50000000,,ST,94
+11,BlondiesCookies,Blondies Cookies - Specialty Food,,,,20000000,,ST,98
+17,CopadiVino,Copa di Vino - Alcoholic Beverages,,,,30000000,,ST,95
+,TheSullivanGenerator,The Sullivan Generator - Novelties,,,,100000000,,R,100
+,Lollacup,Lollacup - Baby and Child Care,,,,10000000,,ST,94
+51,NailPak,Nail Pak - Personal Care and Cosmetics,,,,5000000,,ST,90
+53,DebbieBrooksHandbags,Debbie Brooks Handbags - Women's Accessories,,,,54000000,,R,90
+53,TrimiTank,Trimi Tank - Women's Apparel,,,,5700000,,ST,93
+27,VillyCustoms,Villy Customs - Cycling,,,,50000000,,ST,90
+53,BootIllusions,Boot Illusions - Women's Shoes,,,,10000000,,ST,98
+,AirBedz,AirBedz - Furniture,,,,25000000,,R,92
+20,Skyride,Skyride - Outdoor Recreation,,,,300000000,,ST,94
+21,DanceWithMe,Dance With Me - Fitness Programs,,,,10000000,,ST,97
+11,WildSquirrelNutButter,Wild Squirrel Nut Butter - Specialty Food,,,,5000000,,R,100
+53,MixBikini,Mix Bikini - Women's Apparel,,,,5000000,,ST,91
+,Cab20RockBand,Cab20 Rock Band - Entertainment,,,,20000000,,ST,100
+53,RemyxxReKixxSneakers,Remyxx ReKixx Sneakers - Men and Women's Shoes,,,,5000000,,ST,91
+6,UniKeyTechnologies,UniKey Technologies - Electronics,,,,50000000,,ST,90
+21,TheNitroForceTitan1000,The NitroForce Titan 1000 - Fitness Equipment,,,,25000000,,ST,96
+18,CougarLimited,Cougar Limited - Non-Alcoholic Beverages,,,,15000000,,R,91
+,BevBuckle,Bev Buckle - Novelties,,,,5000000,,ST,97
+,BuggyBeds,Buggy Beds - Pest Control,,,,12500000,,ST,93
+,CoatChex,Coat Chex - Consumer Services,,,,20000000,,R,98
+21,BodyWalking,Body Walking - Fitness Programs,,,,10000000,,ST,90
+21,SurfSetFitness,SurfSet Fitness - Fitness Programs,,,,15000000,,ST,97
+4,CATEapp,CateApp - Mobile Apps,,,,5000000,,ST,93
+10,AlphaM,Alpha M - Consumer Services,,,,5000000,,R,94
+11,eCreamery,eCreamery - Specialty Food,,,,25000000,,ST,99
+53,RockBands,Rock Bands - Men and Women's Accessories,,,,10000000,,ST,99
+14,PostureNow,Posture Now - Health and Well-Being,,,,10000000,,R,95
+,FuzziBunz,FuzziBunz - Baby and Child Care,,,,50000000,,ST,96
+13,LizLovelyCookies,Liz Lovely Cookies - Specialty Food,,,,20000000,,ST,100
+52,BagBowl,Bag Bowl - Kitchen Tools,,,,4000000,,ST,99
+11,Back9Dips,Back 9 Dips - Specialty Food,,,,15000000,,ST,92
+,LifterHamper,Lifter Hamper - Productivity Tools,,,,8500000,,ST,97
+4,Zomm,Zomm - Mobile Apps,,,,200000000,,R,94
+53,CozyBug,Cozy Bug - Baby and Children's Apparel and Accessories,,,,5000000,,ST,93
+,MarzSprays,Marz Sprays - Homeopathic Remedies,,,,20000000,,ST,90
+13,WiredWaffles,Wired Waffles - Specialty Food,,,,7500000,,R,94
+,TheSpatty,The Spatty and The Spaddy Dadd - Personal Care and Cosmetics,,,,5000000,,ST,100
+18,PRO-NRG,PRO-NRG - Non-Alcoholic Beverages,,,,25000000,,ST,98
+11,CousinsMaineLobster,Cousins Maine Lobster - Specialty Food,,,,5500000,,ST,93
+,FreakerUSA,Freaker USA - Novelties,,,,20000000,,ST,100
+52,EcoNutsSoap,EcoNutsSoap - Storage and Cleaning Products,,,,17500000,,R,94
+27,SBU,SBU - Cycling,,,,30000000,,ST,90
+52,ScrubDaddy,Scrub Daddy - Kitchen Tools,,,,10000000,,ST,97
+53,TheShemie,The Shemie - Undergarments and Basics,,,,6000000,,R,91
+54,TheBear&TheRat,The Bear & The Rat - Pet Products,,,,12500000,,ST,95
+,TheCoolWazoo,The Cool Wazoo - Baby and Child Care,,,,6500000,,ST,93
+52,PlateTopper,Plate Topper - Kitchen Tools,,,,9000000,,ST,93
+56,NoFlyCone,No Fly Cone - Pest Control,,,,2500000,,ST,90
+53,DriveSuits,Drive Suits - Costumes,,,,15000000,,ST,100
+11,IceChipsCandy,Ice Chips Candy - Specialty Food,,,,25000000,,R,95
+68,ReVestor,ReVestor - Online Services,,,,25000000,,ST,100
+41,PCClassesOnline,PC Classes Online - Online Services,,,,15000000,,ST,93
+11,RuckPack,Ruck Pack Combat Nutrition - Specialty Food,,,,7500000,,R,93
+9,NearlyNewlywed,Nearly Newlywed - Weddings,,,,3500000,,ST,96
+53,TieTry,Tie Try - Men's Accessories,,,,10000000,,ST,100
