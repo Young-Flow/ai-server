@@ -6,13 +6,15 @@ import warnings
 import torch
 warnings.filterwarnings(action='ignore')
 from categories import categories  # Your custom categories mapping
+import os
 
 # ---------------------------------------------------------------------
 # 1. Load Data
 # ---------------------------------------------------------------------
-
-user_invest_data = pd.read_csv('/Users/kimjinha/Documents/GitHub/youngflow/pitchain 2/data/investment_preference.csv', encoding='utf-8')
-company_data = pd.read_csv('/Users/kimjinha/Documents/GitHub/youngflow/pitchain 2/data/company_key_information.csv', encoding='utf-8')
+base_dir = os.path.dirname(os.path.abspath(__file__))
+os.path.join(base_dir, "data", "ratings_small.csv")
+user_invest_data = pd.read_csv(os.path.join(base_dir, "data/investment_preference.csv"), encoding='utf-8')
+company_data = pd.read_csv(os.path.join(base_dir, "data/company_key_information.csv"), encoding='utf-8')
 
 # ---------------------------------------------------------------------
 # 2. Data Preprocessing
@@ -78,9 +80,6 @@ def recommend_top_companies(user_id, num_recommendations=3):
     else:
         print("No Selected Company.")
         return []   
-    #Delete row which don't have discription.
-    #company_data_aligned = company_data[company_data['description'].notnull()].reset_index(drop=True)
-
     
     company_selected['final_score'] = (
             0.1*(alpha * company_selected['risk'] +
@@ -99,25 +98,8 @@ def recommend_top_companies(user_id, num_recommendations=3):
     recommendations['category1'] = recommendations['category1'].map(category_dict)
     recommendations['category2'] = recommendations['category2'].map(category_dict)
     
-    # recommendations['investmentGoal(Unscaled)'] = recommendations['investmentGoal(Unscaled)'].apply(
-    #     lambda x: f"₩{int(x):,}"
-    # )
     recommendations['price per share'] = recommendations['price per share'].apply(
         lambda x: f"₩{int(x):,}"
     )
 
     return recommendations
-
-# user_id = 8
-# num_recommendations = 5
-# recommendations = recommend_top_companies(user_id, num_recommendations)
-
-# print(f"Top {num_recommendations} recommendations for User {user_id}:")
-# print(recommendations)
-
-# for i in range(1,user_invest_data.shape[0]):
-#     user_id = i
-#     recommendations = recommend_top_companies(user_id)
-#     print(f"Top {num_recommendations} recommendations for User {user_id}:")
-#     print(recommendations)
-

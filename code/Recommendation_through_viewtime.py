@@ -6,13 +6,13 @@ import torch.optim as optim
 from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader, TensorDataset
 from torch.utils.tensorboard import SummaryWriter
+import os
 
 writer = SummaryWriter()
 
 # 데이터 로드 및 전처리
-data_path = "/Users/kimjinha/Documents/GitHub/youngflow/pitchain 2/data/ratings_small.csv"
-
-data = pd.read_csv(data_path,encoding='utf-8')
+base_dir = os.path.dirname(os.path.abspath(__file__))
+data = pd.read_csv(os.path.join(base_dir, "data/ratings_small.csv"), encoding='utf-8')
 
 # 입력 열 (viewtime.1, viewtime.2, ...)
 X_columns = [col for col in data.columns if col.startswith('viewed time')]
@@ -79,11 +79,9 @@ def train_model(model, train_loader, criterion, optimizer, epochs=100,save_path=
             loss.backward()
             optimizer.step()
             epoch_loss += loss.item()
-        #print(f"Epoch {epoch + 1}/{epochs}, Loss: {epoch_loss / len(train_loader):.4f}")
 
         #가중치 저장
         torch.save(model.state_dict(), save_path)
-        #print(f"Model weights saved to {save_path}")
 
 # 모델 학습
 train_model(model, train_loader, criterion, optimizer, epochs=100,save_path="model_weights.pth")

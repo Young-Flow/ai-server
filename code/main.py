@@ -8,10 +8,12 @@ from category_recommendation import recommend_top_companies
 from Recommendation_through_viewtime import ViewTimePredictor,load_model
 import os
 import logging
+
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
 base_dir = os.path.dirname(os.path.abspath(__file__))
-data_path = os.path.join(base_dir, "/Users/kimjinha/Documents/GitHub/youngflow/pitchain 2/data/ratings_small.csv")  # Adjust the relative path
+data = pd.read_csv(os.path.join(base_dir, "data/ratings_small.csv"), encoding='utf-8')
 
 app = FastAPI()
 class RecommendationRequest(BaseModel):
@@ -20,17 +22,13 @@ class RecommendationRequest(BaseModel):
 # ---------------------------------------------------------------------
 # AI load
 # ---------------------------------------------------------------------
-data = pd.read_csv(data_path,encoding='utf-8')
 
 X_columns = [col for col in data.columns if col.startswith('viewed time')]
-#X = data[X_columns].iloc[memberId]
-#X = torch.tensor(X, dtype=torch.float32)
+
 hidden_dim = 128
 model = ViewTimePredictor(input_dim=len(X_columns), hidden_dim=hidden_dim, output_dim=len(X_columns))
-model = load_model(model,load_path = "/Users/kimjinha/Documents/GitHub/youngflow/pitchain 2/code/model_weights.pth")
+model = load_model(model, load_path = os.path.join(base_dir, "model_weights.pth"))
 model.eval()
-
-
 
 @app.get("/")
 def root():
@@ -80,26 +78,6 @@ def get_recommendation(memberId: int, num_recommendations: int):
         logger.error(f"Error for memberId {memberId}: {str(e)}", exc_info=True)
         raise HTTPException(status_code=500, detail=f"Error generating recommendations: {str(e)}")
 
-# -----------------------------------------------------------------------------------------------------
-# def get_recommendation(memberId: int, num_recommendations:int):
-#     recommendations_by_category = recommend_top_companies(memberId, num_recommendations)
-#     print(f"recommendations_by_category: {recommendations_by_category}")
-#     if isinstance(recommendations_by_category, list):
-#         recommendations_by_category = pd.DataFrame(recommendations_by_category)
-#
-#     X = torch.tensor(data[X_columns].iloc[memberId - 1].values, dtype=torch.float32)
-#     with torch.no_grad():
-#         recommendations_by_AI = model(X)
-#     recommendations_by_category = recommendations_by_category.reset_index(drop=True)
-#     final_score = recommendations_by_category['final_score']
-#     AI_calculation = pd.Series(recommendations_by_AI.detach().numpy()).loc[recommendations_by_category['bmId']].reset_index(drop=True)
-#
-#     recommendations_by_category['score'] = final_score+AI_calculation
-#     recommendations_by_category = recommendations_by_category.sort_values('score',ascending=False)
-#     # print(recommendations_by_category['score'])
-#     # print(recommendations_by_category)
-#     return recommendations_by_category
-
 @app.post("/recommendations/")
 def recommend(request: RecommendationRequest):
     try:
@@ -120,22 +98,6 @@ def recommend(request: RecommendationRequest):
         }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error generating recommendations: {str(e)}")
-
-# recommendations_by_category = recommend_top_companies(user_id, num_recommendations)
-# print(recommendations_by_category)
-# recommendations_by_AI = model(X)
-# recommendations_by_category = recommendations_by_category.reset_index(drop=True)
-# final_score = recommendations_by_category['final_score']
-# AI_calculation = pd.Series(recommendations_by_AI.detach().numpy()).loc[recommendations_by_category['bmId']].reset_index(drop=True)
-# AI_calculation = pd.Series(recommendations_by_AI.detach().numpy()).loc[recommendations_by_category['bmId']].reset_index(drop=True)
-#
-# recommendations_by_category['score'] = final_score+AI_calculation
-# recommendations_by_category = recommendations_by_category.sort_values('score',ascending=False)
-# print(recommendations_by_category['score'])
-# print(recommendations_by_category)
-
-
-
 
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
