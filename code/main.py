@@ -8,6 +8,7 @@ from category_recommendation import recommend_top_companies
 from Recommendation_through_viewtime import ViewTimePredictor,load_model
 import os
 import logging
+from typing import List
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -34,6 +35,23 @@ model.eval()
 def root():
     return {"message": "Welcome to the Recommendation API"}
 
+class PreferenceInfoRes(BaseModel):
+    bmId: int
+    spViewTime: int
+    isViewed: bool
+    isInvested: bool
+
+class MemberPreferenceInfoRes(BaseModel):
+    memberId: int
+    preferenceInfoResList: List[PreferenceInfoRes]
+
+@app.post("/models")
+async def update_models(infos: List[MemberPreferenceInfoRes]):
+    for info in infos:
+        print(f"Member ID: {info.memberId}")
+        for preference_info in info.preferenceInfoResList:
+            print(f"  BM ID: {preference_info.bmId}, View Time: {preference_info.spViewTime}, Viewed: {preference_info.isViewed}, Invested: {preference_info.isInvested}")
+    
 
 def get_recommendation(memberId: int, num_recommendations: int):
     try:
