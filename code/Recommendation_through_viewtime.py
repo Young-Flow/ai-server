@@ -7,37 +7,56 @@ from sklearn.model_selection import train_test_split
 from torch.utils.data import DataLoader, TensorDataset
 from torch.utils.tensorboard import SummaryWriter
 import os
+from typing import List
+from model_data import MemberPreferenceInfoRes, PreferenceInfoRes
 
-writer = SummaryWriter()
+def convert_to_tenser_data(infos: List[MemberPreferenceInfoRes]):
+    """
+    Convert user preference data into a structured tensor dataset.
+    - Sort data by `memberId` (column-wise) and `bmId` (row-wise).
+    - Drop `memberId` and `bmId` before training.(학습 데이터가 아니므로 드랍)
+    """
+    data = []
 
-# 데이터 로드 및 전처리
-base_dir = os.path.dirname(os.path.abspath(__file__))
-data = pd.read_csv(os.path.join(base_dir, "data/ratings_small.csv"), encoding='utf-8')
+    for info in infos:
+        member_id = info.memberId
+        for preference_info in info.preferenceInfoResList:
+            bm_id = preference_info.bmId
+            view_time = preference_info.spViewTime  # Feature
+            ctr = int(preference_info.isViewed)  # Convert `isViewed` (True/False) to 1/0
+            like_click = int(preference_info.isInvested)  # Convert `isInvested` (True/False) to 1/0
+            target = ctr + like_click  # Label calculation
 
-# 입력 열 (viewtime.1, viewtime.2, ...)
-X_columns = [col for col in data.columns if col.startswith('viewed time')]
-X = data[X_columns].values
+            # Store (memberId, bmId, feature, target) for sorting
+            data.append([member_id, bm_id, view_time, target])
 
-# 출력 열 (like click.1 + ctr.1, ...)
-like_click_columns = [col for col in data.columns if col.startswith('like click')]
-ctr_columns = [col for col in data.columns if col.startswith('ctr')]
-y = data[like_click_columns].values + data[ctr_columns].values
+    # Convert to Pandas DataFrame for easier sorting
+    df = pd.DataFrame(data, columns=["memberId", "bmId", "viewTime", "target"])
 
-# Train-Test Split
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    df = df.sort_values(by=["memberId", "bmId"]).reset_index(drop=True)
+    df["viewTime"] = (df["viewTime"] - df["viewTime"].mean()) / df["viewTime"].std()
+    # Drop `memberId` and `bmId` (used only for sorting)
+    df_final = df.drop(columns=["memberId", "bmId"])
 
-# 텐서로 변환
-X_train_tensor = torch.tensor(X_train, dtype=torch.float32)
-y_train_tensor = torch.tensor(y_train, dtype=torch.float32)
-X_test_tensor = torch.tensor(X_test, dtype=torch.float32)
-y_test_tensor = torch.tensor(y_test, dtype=torch.float32)
+    # Convert to PyTorch tensors
+    X_tensor = torch.tensor(df_final[["viewTime"]].values, dtype=torch.float32)
+    y_tensor = torch.tensor(df_final[["target"]].values, dtype=torch.float32)
 
-# DataLoader 생성
-train_dataset = TensorDataset(X_train_tensor, y_train_tensor)
-train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
+    # Train-Test Split
+    train_size = int(0.8 * len(X_tensor))
+    test_size = len(X_tensor) - train_size
 
-test_dataset = TensorDataset(X_test_tensor, y_test_tensor)
-test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False)
+    indices = torch.randperm(len(X_tensor))  # Shuffle indices
+    train_indices = indices[:train_size]
+    test_indices = indices[train_size:]
+
+    X_train_tensor = X_tensor[train_indices]
+    X_test_tensor = X_tensor[test_indices]
+    y_train_tensor = y_tensor[train_indices]
+    y_test_tensor = y_tensor[test_indices]
+
+    return X_train_tensor, X_test_tensor, y_train_tensor, y_test_tensor, df  # Keep `df` for reference
+
 
 # 모델 정의
 class ViewTimePredictor(nn.Module):
@@ -56,18 +75,7 @@ class ViewTimePredictor(nn.Module):
     def forward(self, x):
         return self.model(x)
 
-# 모델 초기화
-input_dim = X_train.shape[1]  # 입력 feature 개수
-hidden_dim = 128
-output_dim = y_train.shape[1]  # 출력 feature 개수
-
-model = ViewTimePredictor(input_dim, hidden_dim, output_dim)
-
-# 손실 함수 및 옵티마이저 정의
-criterion = nn.MSELoss()
-optimizer = optim.Adam(model.parameters(), lr=0.001)
-
-def train_model(model, train_loader, criterion, optimizer, epochs=100,save_path="model_weights.pth"):
+def train_model(writer, model, train_loader, criterion, optimizer, epochs=100,save_path="model_weights.pth"):
     for epoch in range(epochs):
         model.train()
         epoch_loss = 0
@@ -83,35 +91,49 @@ def train_model(model, train_loader, criterion, optimizer, epochs=100,save_path=
         #가중치 저장
         torch.save(model.state_dict(), save_path)
 
-# 모델 학습
-train_model(model, train_loader, criterion, optimizer, epochs=100,save_path="model_weights.pth")
-writer.flush()
-writer.close()
+def load_model(infos: List[MemberPreferenceInfoRes]):
+    X_train_tensor, X_test_tensor, y_train_tensor, y_test_tensor, df_mapping = convert_to_tenser_data(infos)
 
-def load_model(model, load_path="model_weights.pth"):
+    # DataLoader 생성
+    train_dataset = TensorDataset(X_train_tensor, y_train_tensor)
+    train_loader = DataLoader(train_dataset, batch_size=16, shuffle=True)
+
+    test_dataset = TensorDataset(X_test_tensor, y_test_tensor)
+    test_loader = DataLoader(test_dataset, batch_size=16, shuffle=False)
+
+    input_dim = X_train_tensor.shape[1]  # 입력 feature 개수
+    hidden_dim = 128
+    output_dim = y_train_tensor.shape[1]  # 출력 feature 개수
+
+    model = ViewTimePredictor(input_dim, hidden_dim, output_dim)
+
+    # 손실 함수 및 옵티마이저 정의
+    criterion = nn.MSELoss()
+    optimizer = optim.Adam(model.parameters(), lr=0.001)
+
+    # 모델 학습
+    writer = SummaryWriter()
+    train_model(writer, model, train_loader, criterion, optimizer, epochs=100)
+
+    # 모델 평가
+    load_path="model_weights.pth"
     model.load_state_dict(torch.load(load_path))
     print(f"Model weights loaded from {load_path}")
-    return model
+    evaluate_model(writer, model, test_loader, criterion, X_train_tensor, y_train_tensor)
+    model.eval()
+
+    writer.flush()
+    writer.close()
+    return model, X_train_tensor, y_train_tensor, df_mapping
 
 # 모델 평가
-def evaluate_model(model, test_loader):
+def evaluate_model(writer, model, test_loader, criterion, X_train_tensor, y_train_tensor):
     model.eval()
     total_loss = 0
     with torch.no_grad():
         for X_batch, y_batch in test_loader:
             outputs = model(X_batch)
             loss = criterion(outputs, y_batch)
-            writer.add_scalar("Loss/", loss)
+            writer.add_scalar("Loss/test", loss)
             total_loss += loss.item()
     print(f"Test Loss: {total_loss / len(test_loader):.4f}")
-
-load_model(model,load_path="model_weights.pth")
-evaluate_model(model, test_loader)
-
-model.eval()
-
-with torch.no_grad():  # 그래디언트 계산 비활성화
-    print("x input tensor : ", X_train_tensor)
-    output = model(X_train_tensor[0])
-    print("Model Output:", output)
-    print("y output tensor : ", y_train[0])

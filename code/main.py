@@ -9,6 +9,7 @@ from Recommendation_through_viewtime import ViewTimePredictor,load_model
 import os
 import logging
 from typing import List
+from model_data import MemberPreferenceInfoRes, PreferenceInfoRes
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -27,33 +28,35 @@ class RecommendationRequest(BaseModel):
 X_columns = [col for col in data.columns if col.startswith('viewed time')]
 
 hidden_dim = 128
-model = ViewTimePredictor(input_dim=len(X_columns), hidden_dim=hidden_dim, output_dim=len(X_columns))
-model = load_model(model, load_path = os.path.join(base_dir, "model_weights.pth"))
-model.eval()
+
+model = None
+df_mapping = None
 
 @app.get("/")
 def root():
     return {"message": "Welcome to the Recommendation API"}
 
-class PreferenceInfoRes(BaseModel):
-    bmId: int
-    spViewTime: int
-    isViewed: bool
-    isInvested: bool
-
-class MemberPreferenceInfoRes(BaseModel):
-    memberId: int
-    preferenceInfoResList: List[PreferenceInfoRes]
-
 @app.post("/models")
-async def update_models(infos: List[MemberPreferenceInfoRes]):
-    for info in infos:
-        print(f"Member ID: {info.memberId}")
-        for preference_info in info.preferenceInfoResList:
-            print(f"  BM ID: {preference_info.bmId}, View Time: {preference_info.spViewTime}, Viewed: {preference_info.isViewed}, Invested: {preference_info.isInvested}")
-    
+def load_and_save_model(infos: List[MemberPreferenceInfoRes]):
+    # 데이터 잘 받아와지는지 확인하는 코드로, 실제로 삭제해도 무방합니다.
+    # for info in infos:
+    #     print(info)
+    #     for preference_info in info.preferenceInfoResList:
+    #         print(preference_info)
+            
+    global model, df_mapping
+    # model = load_model(infos)
+    model, X_train_tensor, y_train_tensor, df_mapping = load_model(infos)
 
-def get_recommendation(memberId: int, num_recommendations: int):
+    with torch.no_grad():
+        predictions = model(X_train_tensor)  # Get predictions for training data
+        df_mapping.loc[:len(X_train_tensor)-1, "prediction"] = predictions.numpy().flatten()  # Assign only to training rows
+
+        # Print predicted values per user & item
+        print(df_mapping[["memberId", "bmId", "prediction"]])
+
+
+async def get_recommendation(memberId: int, num_recommendations: int):
     try:
         logger.info(f"Processing request for memberId: {memberId}")
 
@@ -97,14 +100,14 @@ def get_recommendation(memberId: int, num_recommendations: int):
         raise HTTPException(status_code=500, detail=f"Error generating recommendations: {str(e)}")
 
 @app.post("/recommendations/")
-def recommend(request: RecommendationRequest):
+async def recommend(request: RecommendationRequest):
     try:
         memberId = request.memberId
         num_recommendations = request.num_recommendations
         if memberId < 1 or memberId > len(data):
             raise HTTPException(status_code=400, detail="Invalid memberId")
 
-        recommend_bm = get_recommendation(memberId, num_recommendations)
+        recommend_bm = await get_recommendation(memberId, num_recommendations)
 
         # ✅ Fix: Remove any remaining NaN values
         recommend_bm = [int(x) for x in recommend_bm if not pd.isna(x)]
